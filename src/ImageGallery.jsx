@@ -17,7 +17,7 @@ function ImageGallery() {
           {image.includes('.svg') &&
           <div className='img_item'>
             <picture className='img_wrapper svg'>
-              <img  key={index} src={image} alt={`${index}`} />
+              <img  key={index} src={image} alt={getImageName(image)} />
             </picture>
             <strong>{getImageName(image)}</strong>
           </div>}
@@ -29,7 +29,7 @@ function ImageGallery() {
         {image.includes('data:image/png') && 
         <div className='img_item png' tabIndex="0">
           <picture className='img_wrapper png'>
-            <img  key={index} src={image} alt={`${index}`} />
+            <img  key={index} src={image} alt={`${image}`} />
           </picture>
         </div>}
         </>
